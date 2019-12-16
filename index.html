@@ -13116,7 +13116,14 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Pranav-Mechineni-and-Brandon-Liu-CMSC320-Final">Pranav Mechineni and Brandon Liu CMSC320 Final<a class="anchor-link" href="#Pranav-Mechineni-and-Brandon-Liu-CMSC320-Final">&#182;</a></h2>
+<h2 id="Pranav-Mechineni-and-Brandon-Liu">Pranav Mechineni and Brandon Liu<a class="anchor-link" href="#Pranav-Mechineni-and-Brandon-Liu">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="CMSC320-Final">CMSC320 Final<a class="anchor-link" href="#CMSC320-Final">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -13176,7 +13183,8 @@ eventually seeing what the most correlated causes to heart disease there are.</p
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Here we import and have installed all these libraries on our local machine so we can go ahead 
+<p><em>If you haven't used python before I suggest going to resources to look at the tutorials!</em>
+Here we import and have installed all these libraries on our local machine so we can go ahead 
 and use them for our data wrangling. You will need Python 3 and everything in the box under to properly go through the code and steps further in. I have made it so that you can just copy paste all the code in and it will install what you need to work as well.</p>
 
 </div>
@@ -13189,6 +13197,9 @@ and use them for our data wrangling. You will need Python 3 and everything in th
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>pip install plotly
 <span class="o">!</span>pip install geopandas
+<span class="o">!</span>pip install matplotlib
+<span class="o">!</span>pip install pandas
+<span class="o">!</span>pip install numpy
 <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
 <span class="kn">import</span> <span class="nn">geopandas</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">panda</span>
@@ -13217,18 +13228,32 @@ Requirement already satisfied: retrying&gt;=1.3.3 in /opt/conda/lib/python3.7/si
 Requirement already satisfied: six in /opt/conda/lib/python3.7/site-packages (from plotly) (1.12.0)
 Requirement already satisfied: geopandas in /opt/conda/lib/python3.7/site-packages (0.6.2)
 Requirement already satisfied: fiona in /opt/conda/lib/python3.7/site-packages (from geopandas) (1.8.13)
-Requirement already satisfied: pandas&gt;=0.23.0 in /opt/conda/lib/python3.7/site-packages (from geopandas) (0.25.0)
-Requirement already satisfied: pyproj in /opt/conda/lib/python3.7/site-packages (from geopandas) (2.4.2.post1)
 Requirement already satisfied: shapely in /opt/conda/lib/python3.7/site-packages (from geopandas) (1.6.4.post2)
+Requirement already satisfied: pyproj in /opt/conda/lib/python3.7/site-packages (from geopandas) (2.4.2.post1)
+Requirement already satisfied: pandas&gt;=0.23.0 in /opt/conda/lib/python3.7/site-packages (from geopandas) (0.25.0)
 Requirement already satisfied: munch in /opt/conda/lib/python3.7/site-packages (from fiona-&gt;geopandas) (2.5.0)
-Requirement already satisfied: click-plugins&gt;=1.0 in /opt/conda/lib/python3.7/site-packages (from fiona-&gt;geopandas) (1.1.1)
-Requirement already satisfied: six&gt;=1.7 in /opt/conda/lib/python3.7/site-packages (from fiona-&gt;geopandas) (1.12.0)
-Requirement already satisfied: cligj&gt;=0.5 in /opt/conda/lib/python3.7/site-packages (from fiona-&gt;geopandas) (0.5.0)
 Requirement already satisfied: click&lt;8,&gt;=4.0 in /opt/conda/lib/python3.7/site-packages (from fiona-&gt;geopandas) (7.0)
+Requirement already satisfied: cligj&gt;=0.5 in /opt/conda/lib/python3.7/site-packages (from fiona-&gt;geopandas) (0.5.0)
+Requirement already satisfied: click-plugins&gt;=1.0 in /opt/conda/lib/python3.7/site-packages (from fiona-&gt;geopandas) (1.1.1)
 Requirement already satisfied: attrs&gt;=17 in /opt/conda/lib/python3.7/site-packages (from fiona-&gt;geopandas) (19.1.0)
+Requirement already satisfied: six&gt;=1.7 in /opt/conda/lib/python3.7/site-packages (from fiona-&gt;geopandas) (1.12.0)
 Requirement already satisfied: numpy&gt;=1.13.3 in /opt/conda/lib/python3.7/site-packages (from pandas&gt;=0.23.0-&gt;geopandas) (1.17.0)
-Requirement already satisfied: pytz&gt;=2017.2 in /opt/conda/lib/python3.7/site-packages (from pandas&gt;=0.23.0-&gt;geopandas) (2019.2)
 Requirement already satisfied: python-dateutil&gt;=2.6.1 in /opt/conda/lib/python3.7/site-packages (from pandas&gt;=0.23.0-&gt;geopandas) (2.8.0)
+Requirement already satisfied: pytz&gt;=2017.2 in /opt/conda/lib/python3.7/site-packages (from pandas&gt;=0.23.0-&gt;geopandas) (2019.2)
+Requirement already satisfied: matplotlib in /opt/conda/lib/python3.7/site-packages (3.1.1)
+Requirement already satisfied: kiwisolver&gt;=1.0.1 in /opt/conda/lib/python3.7/site-packages (from matplotlib) (1.1.0)
+Requirement already satisfied: python-dateutil&gt;=2.1 in /opt/conda/lib/python3.7/site-packages (from matplotlib) (2.8.0)
+Requirement already satisfied: pyparsing!=2.0.4,!=2.1.2,!=2.1.6,&gt;=2.0.1 in /opt/conda/lib/python3.7/site-packages (from matplotlib) (2.4.2)
+Requirement already satisfied: numpy&gt;=1.11 in /opt/conda/lib/python3.7/site-packages (from matplotlib) (1.17.0)
+Requirement already satisfied: cycler&gt;=0.10 in /opt/conda/lib/python3.7/site-packages (from matplotlib) (0.10.0)
+Requirement already satisfied: setuptools in /opt/conda/lib/python3.7/site-packages (from kiwisolver&gt;=1.0.1-&gt;matplotlib) (41.0.1)
+Requirement already satisfied: six&gt;=1.5 in /opt/conda/lib/python3.7/site-packages (from python-dateutil&gt;=2.1-&gt;matplotlib) (1.12.0)
+Requirement already satisfied: pandas in /opt/conda/lib/python3.7/site-packages (0.25.0)
+Requirement already satisfied: python-dateutil&gt;=2.6.1 in /opt/conda/lib/python3.7/site-packages (from pandas) (2.8.0)
+Requirement already satisfied: pytz&gt;=2017.2 in /opt/conda/lib/python3.7/site-packages (from pandas) (2019.2)
+Requirement already satisfied: numpy&gt;=1.13.3 in /opt/conda/lib/python3.7/site-packages (from pandas) (1.17.0)
+Requirement already satisfied: six&gt;=1.5 in /opt/conda/lib/python3.7/site-packages (from python-dateutil&gt;=2.6.1-&gt;pandas) (1.12.0)
+Requirement already satisfied: numpy in /opt/conda/lib/python3.7/site-packages (1.17.0)
 </pre>
 </div>
 </div>
@@ -13376,89 +13401,89 @@ There isnt any in this dataset but if you ever do this again in your data scienc
   </thead>
   <tbody>
     <tr>
-      <th>291</th>
-      <td>58</td>
+      <th>166</th>
+      <td>67</td>
       <td>1</td>
       <td>0</td>
-      <td>114</td>
-      <td>318</td>
+      <td>120</td>
+      <td>229</td>
       <td>0</td>
+      <td>0</td>
+      <td>129</td>
+      <td>1</td>
+      <td>2.6</td>
+      <td>1</td>
       <td>2</td>
+      <td>3</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>268</th>
+      <td>54</td>
+      <td>1</td>
+      <td>0</td>
+      <td>122</td>
+      <td>286</td>
+      <td>0</td>
+      <td>0</td>
+      <td>116</td>
+      <td>1</td>
+      <td>3.2</td>
+      <td>1</td>
+      <td>2</td>
+      <td>2</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>137</th>
+      <td>62</td>
+      <td>1</td>
+      <td>1</td>
+      <td>128</td>
+      <td>208</td>
+      <td>1</td>
+      <td>0</td>
       <td>140</td>
       <td>0</td>
-      <td>4.4</td>
+      <td>0.0</td>
+      <td>2</td>
+      <td>0</td>
+      <td>2</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>31</th>
+      <td>65</td>
+      <td>1</td>
+      <td>0</td>
+      <td>120</td>
+      <td>177</td>
+      <td>0</td>
+      <td>1</td>
+      <td>140</td>
+      <td>0</td>
+      <td>0.4</td>
+      <td>2</td>
       <td>0</td>
       <td>3</td>
       <td>1</td>
-      <td>0</td>
     </tr>
     <tr>
-      <th>22</th>
-      <td>42</td>
+      <th>294</th>
+      <td>44</td>
       <td>1</td>
-      <td>0</td>
-      <td>140</td>
-      <td>226</td>
-      <td>0</td>
-      <td>1</td>
-      <td>178</td>
-      <td>0</td>
-      <td>0.0</td>
-      <td>2</td>
-      <td>0</td>
-      <td>2</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>134</th>
-      <td>41</td>
-      <td>0</td>
-      <td>1</td>
-      <td>126</td>
-      <td>306</td>
-      <td>0</td>
-      <td>1</td>
-      <td>163</td>
-      <td>0</td>
-      <td>0.0</td>
-      <td>2</td>
-      <td>0</td>
-      <td>2</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>45</th>
-      <td>52</td>
-      <td>1</td>
-      <td>1</td>
-      <td>120</td>
-      <td>325</td>
-      <td>0</td>
-      <td>1</td>
-      <td>172</td>
-      <td>0</td>
-      <td>0.2</td>
-      <td>2</td>
-      <td>0</td>
-      <td>2</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>57</td>
-      <td>0</td>
       <td>0</td>
       <td>120</td>
-      <td>354</td>
+      <td>169</td>
       <td>0</td>
       <td>1</td>
-      <td>163</td>
+      <td>144</td>
       <td>1</td>
-      <td>0.6</td>
-      <td>2</td>
+      <td>2.8</td>
       <td>0</td>
-      <td>2</td>
+      <td>0</td>
       <td>1</td>
+      <td>0</td>
     </tr>
   </tbody>
 </table>
@@ -13479,17 +13504,14 @@ In the next step we make sure that every column is accounted for after we edit i
 
 </div>
 </div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Variables/Columns being used in this project:</p>
-<p>age: in years
+</div>Variables/Columns being used in this project:
+
+age: in years
 sex:(1 = male; 0 = female)
 cpchest: pain type
 trestbpsresting blood pressure: (in mm Hg on admission to the hospital)
 cholserum cholestoral: in mg/dl
-fbs(fasting blood sugar &gt; 120 mg/dl): (1 = true; 0 = false)
+fbs(fasting blood sugar > 120 mg/dl): (1 = true; 0 = false)
 restecgresting: electrocardiographic results
 thalachmaximum: heart rate achieved
 exangexercise: induced angina: (1 = yes; 0 = no)
@@ -13497,11 +13519,8 @@ oldpeakST: depression induced by exercise relative to rest
 slopethe: slope of the peak exercise ST segment
 canumber of major vessels: (0-3) colored by flourosopy
 thal3 = normal; 6 = fixed defect; 7 = reversable defect
-target: (1 = heart disease or 0 = no heart disease)</p>
-
-</div>
-</div>
-</div>
+target: (1 = heart disease or 0 = no heart disease)
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[4]:</div>
@@ -14998,6 +15017,14 @@ This information was just from using the calculator and our previous labeling of
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We can see from this graph here that most of these patients peak around the 40-48 area and 50-56 area. The positive patients are honestly have a significant increase around the 40-50 area so if we see in future plots/information of a 40-50 year old we can assume that they are more likely than the other patients to have a heart disease. Usually you believe that there's going to be more heart disease for the later ages such as the 60-70 range. You could also argue that those who live that late are going to be healthier since they got that old without any other problem anyway. Yes this is a little dark but that's life man.</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[12]:</div>
@@ -15036,6 +15063,14 @@ This information was just from using the calculator and our previous labeling of
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We can see here that when there is 0 oldpeak, there is going to be the highest rate of heart disease. Thus those with higher OldPeak we are assuming that they are exercising so they have less chance of heart disease.</p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -15298,7 +15333,7 @@ for all variables.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">distplot</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="n">orig_table</span><span class="p">[</span><span class="s1">&#39;thal&#39;</span><span class="p">])</span>
@@ -15356,7 +15391,7 @@ Remember, causation doesnt equal correlation.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">distplot</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="n">orig_table</span><span class="p">[</span><span class="s1">&#39;cp&#39;</span><span class="p">])</span>
@@ -15412,7 +15447,7 @@ Remember, causation doesnt equal correlation.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## In this plot we are able to graph our findings from the data wrangling in a bar graph</span>
@@ -15452,7 +15487,7 @@ Remember, causation doesnt equal correlation.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">countplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;target&#39;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span> <span class="s1">&#39;cp&#39;</span><span class="p">,</span><span class="n">data</span> <span class="o">=</span> <span class="n">orig_table</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="s2">&quot;Set1&quot;</span><span class="p">)</span>
@@ -15489,7 +15524,7 @@ Remember, causation doesnt equal correlation.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## It appears that those that have heart disease(target = 1) end up having chest pain that is mainly</span>
@@ -15504,7 +15539,7 @@ Remember, causation doesnt equal correlation.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## Furthermore we can actually plot the correlation between all the columns possible</span>
@@ -15542,33 +15577,12 @@ Remember, causation doesnt equal correlation.</p>
 </div>
 
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## From this visualization there&#39;s actually a positive correlation for chest pains,slope, and thalach</span>
-<span class="c1">##and the target as well as there is a negative correlation for gender, age, oldpeak, and more</span>
-<span class="c1">## These correlations let us understand what really is affecting the possibility of heart disease</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Hypothesis-Testing">Hypothesis Testing<a class="anchor-link" href="#Hypothesis-Testing">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>From the data we've seen, there appears to be a postitive correlation for specific attributes and heart attacks. However, we don't know which are exactly so we are going to find the Pearson Correlation Coefficient between them.</p>
-<p>Null Hyphothesis: The Pearson Correlation Coeeficient</p>
+<p>From this visualization there's actually a positive correlation for chest pains,slope, and thalach
+and the target as well as there is a negative correlation for gender, age, oldpeak, and more
+These correlations let us understand what really is affecting the possibility of heart disease</p>
 
 </div>
 </div>
@@ -15582,7 +15596,7 @@ Remember, causation doesnt equal correlation.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">axee</span> <span class="o">=</span> <span class="p">[]</span>
@@ -15631,7 +15645,7 @@ Remember, causation doesnt equal correlation.</p>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[28]:</div>
+    <div class="prompt output_prompt">Out[25]:</div>
 
 
 
@@ -15651,7 +15665,7 @@ Remember, causation doesnt equal correlation.</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Pearson-Correlation-Coefficient">Pearson Correlation Coefficient<a class="anchor-link" href="#Pearson-Correlation-Coefficient">&#182;</a></h3>
+<h2 id="Pearson-Correlation-Coefficient-and-Conclusion">Pearson Correlation Coefficient and Conclusion<a class="anchor-link" href="#Pearson-Correlation-Coefficient-and-Conclusion">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -15659,23 +15673,27 @@ Remember, causation doesnt equal correlation.</p>
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>For those that don't know, Pearson’s correlation coefficient is the essentially a test that measures the statistical relationship between multiple variables. The correlation coefficient uses a specific method of covariance that gives the best results of correlation possible. You can get information of the correlation as well as the variable's relationship in where the graph might be heading as well.
-We believe that there is a linear relationship between some of the variables and if there was a heart attack or not. THe scores can range from -1 to 1, the closer to 0 the value is the less the association between the variables. In fact, most of the data that is further away from 0 is more correlated together. Thus, we can see from the data that the ca(number of major vessels colored by flourospy), exang, oldpeak, thal, cp, thalach are actually correlated. Now the visualization of the data is a little off, however I printed the data after and those that are closer to .5 which is ca, exang, oldpeak, thal, cp, and thalach, create a moderate positive relationship between the target and the themselves. Thus, There is indeed a positive relationship. Our goal was to find the causes of heart attack that we could prove are correlated. Now we have proven those that are most closely correlated, however the other variables might as well due to their score but the closer to 0 they are, the less probable.</p>
+We believe that there is a linear relationship between some of the variables and if there was a heart attack or not. THe scores can range from -1 to 1, the closer to 0 the value is the less the association between the variables. In fact, most of the data that is further away from 0 is more correlated together. Thus, we can see from the data that the ca(number of major vessels colored by flourospy), exang, oldpeak, thal, cp, thalach are actually correlated. Now the visualization of the data is a little off, however I printed the data after and those that are closer to .5 which is ca, exang, oldpeak, thal, cp, and thalach, create a moderate positive relationship between the target and the themselves. Thus, There is indeed a positive relationship. Our goal was to find the causes of heart attack that we could prove are correlated. Now we have proven those that are most closely correlated, however the other variables might as well due to their score but the closer to 0 they are, the less probable. I hope you learned something from this project and I also hope you think more about taking care of yourself and where you are at risk for maybe your loved one is at risk from heart disease :).</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-    </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="6.-Resources">6. Resources<a class="anchor-link" href="#6.-Resources">&#182;</a></h2>
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Dataset: The most popular Heart Disease post on kaggle
+Python Introduction: <a href="https://www.w3schools.com/python/python_intro.asp">https://www.w3schools.com/python/python_intro.asp</a>
+Specific in Depth Python tutorial for scraping/panda/plotting... <a href="https://www.youtube.com/watch?v=WGJJIrtnfpk&amp;t=42183s">https://www.youtube.com/watch?v=WGJJIrtnfpk&amp;t=42183s</a></p>
 
+</div>
+</div>
 </div>
     </div>
   </div>
